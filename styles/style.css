@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22d4fd;
+    --color-hover: #272727;
+    --fuente-monserrat: "Montserrat", sans-serif;
+    --fuente-Krona: "Krona One", sans-serif;
+}
+
 *{
     margin:0;
     padding:0;
 }
 
 body {
-    background-color: #000000;
-    color: #f6f6f6;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
     box-sizing: border-box;
 }
 
@@ -21,10 +30,10 @@ body {
 }
 
 .header__menu__link {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--fuente-monserrat);
     font-size: 24px;
     font-weight: 600;
-    color: #22D4FD;
+    color: var(--color-terciario);
     text-decoration: none;
 }
 
@@ -32,7 +41,7 @@ body {
 .presentacion {
     display: flex;
     align-items: center;
-    padding: 7% 15%;
+    padding: 3% 15%;
     justify-content: space-between;
 }
 
@@ -45,16 +54,16 @@ body {
 
 .presentacion__contenido__titulo {
     font-size: 36px;
-    font-family: "Krona One", sans-serif;
+    font-family: var(--fuente-Krona);
 }
 
 .titulo-destacado {
-    color: #22D4FD
+    color: var(--color-terciario);
 }
 
 .presentacion__contenido__texto {
     font-size: 24px;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--fuente-monserrat);
 }
 
 .presentacion__enlaces {
@@ -76,30 +85,34 @@ body {
     font-size: 24px;
     font-weight: 600;
     text-decoration: none;
-    color:#f6f6f6;
-    border: 2px solid #22D4FD;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
 .presentacion__enlaces__link:hover{
-    background-color: #272727;
+    background-color: var(--color-hover);
     font-weight: 900;
 }
 
 .presentacion__enlaces__subtitulo {
-    font-family: "Krone One", sans-serif;
+    font-family: var(--fuente-Krona);
     font-size: 24px;
     font-weight: 400;
 }
 
+.imagen {
+    padding-left: 10%;
+}
+
 .footer {
-    background-color: #22D4FD;
-    color: #000000;
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
     padding: 24px;
     text-align: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--fuente-monserrat);
     font-size: 24px;
     font-weight: 400;
 }
