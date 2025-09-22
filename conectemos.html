@@ -6,14 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <header class="header">
-        <nav class="header__menu">
+        <nav id="menu" class="header__menu">
             <a class="header__menu__link" href="index.html">Home</a>
             <a class="header__menu__link" href="about.html">Sobre mí</a>
             <a class="header__menu__link" href="servicios.html">Servicios</a>
             <a class="header__menu__link" href="conectemos.html">Conéctemos</a>
         </nav>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
     </header>
     <main class="presentacion">
         <section class="presentacion__contenido">
@@ -42,5 +44,17 @@
     <footer class="footer">
         <p>Desarrollado por Snitch</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.querySelector('.menu-toggle');
+            const menu = document.getElementById('menu');
+            if (!btn || !menu) return;
+
+            btn.addEventListener('click', () => {
+            const abierto = menu.classList.toggle('is-open');
+            btn.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+            });
+        });
+    </script>
 </body>
 </html>
